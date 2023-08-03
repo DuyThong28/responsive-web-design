@@ -1,0 +1,158 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: rgb(70, 60, 53);
+  margin: 0;
+}
+
+header {
+  background-color: rgb(47, 44, 44);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5%;
+  text-align: center;
+  align-items: center;
+  height: 5rem;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+header li a {
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: orange;
+}
+
+header li a:hover {
+  color: #fad096;
+}
+
+.menu-btn {
+  display: none;
+}
+
+#logo {
+  text-decoration: none;
+  color: orange;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  color: orange;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3rem;
+}
+
+.latest-products ul {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-item {
+  border-radius: 10px;
+  background: wheat;
+  overflow: hidden;
+}
+
+.food-item-content {
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.food-item-content a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.food-item-content p {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#side-drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(47, 44, 44);
+  width: 100%;
+  height: 100%;
+}
+
+#side-drawer header {
+  justify-content: right;
+}
+
+@media (max-width: 48rem) {
+  .latest-products ul {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 3rem;
+    justify-content: space-around;
+  }
+
+  .menu-btn span {
+    background-color: white;
+    width: 100%;
+    height: 3px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #side-drawer:target {
+    display: block;
+  }
+
+  #side-drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #side-drawer a {
+    text-decoration: none;
+    color: rgb(221, 221, 54);
+    font-size: 2rem;
+  }
+
+  #side-drawer li {
+    padding: 2rem;
+  }
+}
